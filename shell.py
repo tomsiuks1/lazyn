@@ -1,9 +1,9 @@
-import basic
+import lazyn
 
 while True:
-	text = input('basic > ')
+	text = input('lazyn => ')
 	if text.strip() == "": continue
-	result, error = basic.run('<stdin>', text)
+	result, error = lazyn.run('<stdin>', text)
 
 	if error:
 		print(error.as_string())
@@ -12,3 +12,4 @@ while True:
 			print(repr(result.elements[0]))
 		else:
 			print(repr(result))
+
